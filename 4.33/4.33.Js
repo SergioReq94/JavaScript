@@ -1,7 +1,5 @@
 function filtrarCaracteres(cadena) {
-    let filtro = cadena.filter(cadena => cadena.caracter !== "ñ");
-    return filtro;
+    return cadena.filter(cad => cad !== "ñ");
 }
 let caracter = ["ñ", "$", "&"];
-
 console.log(filtrarCaracteres(caracter));
