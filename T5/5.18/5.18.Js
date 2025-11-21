@@ -4,14 +4,16 @@
  class bicicleta {
     cuadro = "Orbea";
     cambio = "Shimano";
-    #nserie = 85895645;
+    #nserie;
 
     constructor(cuad, camb){
         this.cuadro = cuad;
         this.cambio = camb;
-        this.#nserie = num;
+        this.#nserie = 115485484;
     }
     mostrar(){
-        console.log(`${this.cuadro}/${this.cambio}`);
+        console.log(`${this.cuadro}/${this.cambio}/${this.#nserie}`);
     }
  }
+ let miBici = new bicicleta("Pinarello", "Look");
+ miBici.mostrar();
