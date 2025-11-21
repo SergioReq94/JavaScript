@@ -26,14 +26,18 @@ let telFijo = new Fijo();
 telFijo.mostrar();
 
 class Movil extends Telefono{
-    modelo = "iphone 16";
-    esim = true;
-    constructor(modelo, esim){
+    modelo;
+    esim;
+    constructor(num, operador, modelo, esim){
+        super(num, operador);
         this.modelo = modelo;
         this.esim = esim;
-        super(num, operador);
     }
-    mostrar2(){
 
+    mostrar2(){
+        console.log(`${this.num}/${this.operador}/${this.modelo}/${this.esim}`);
     }
 }
+
+let mov = new Movil(636000111, "MasMovil", "iphone", true);
+mov.mostrar2();
