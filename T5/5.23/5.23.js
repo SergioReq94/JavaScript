@@ -9,15 +9,22 @@ class Club{
         this.numSocios = numSocios;
         this.nombreEstadio = nombreEstadio;
         this.ciudad = ciudad;
-        this.palmares = palmares;
+        this.palmares = palmares.titulo;
+        this.palmares = palmares.anyo;
     }
     verClub(){
-        document.write(this.anyoFundacion + "," + this.numSocios);
+        document.write(`Año de fundación: ${this.anyoFundacion}<br>
+            Número de socios: ${this.numSocios}<br>
+            Nombre del estadio: ${this.nombreEstadio}<br>
+            Ciudad: ${this.ciudad}<br>
+            Palmarés: ${this.palmares}<br><br>`);
     }
 }
-Madrid = new Club(1910, 2000000000);
-Madrid.verClub();
+let realMadrid = new Club(1910, 2000000000, "Santiago Bernabeu", "Madrid", "Champions", 2023);
+realMadrid.verClub();
 
-Barcelona = new Club(1890, 500000000);
-Barcelona.verClub();
+let fbcBarcelona = new Club(1890, 500000000, "Camp Nou", "Barcelona", "20 ligas");
+fbcBarcelona.verClub();
 
+let realMurcia = new Club();
+realMurcia.verClub();
