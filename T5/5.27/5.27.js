@@ -1,0 +1,1 @@
+const precioRegex = /^\s*\d+([.,]\d{1,2})?\s*€\s*$/;

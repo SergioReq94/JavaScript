@@ -1,0 +1,1 @@
+const urlRegex = /^https:\/\/[A-Za-z0-9.-]+\.es\/?[^\ñ]*$/;
