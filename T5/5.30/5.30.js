@@ -1,8 +1,9 @@
-function escapeHTML(text) {
-    return text
-        .replace(/&/g, "&amp;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+function escapeTHTML(text) {
+  var replacements = [["&", "&amp;"], ["\"", "&quot;"], ["<", "&lt;"], [">", "&gt;"]];
+  
+  forEach(replacements, function(replace) {
+    text = text.replace(replace[0], replace[1]);
+  });
+  
+  return text;
 }

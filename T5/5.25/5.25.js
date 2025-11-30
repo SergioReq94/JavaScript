@@ -1,24 +1,31 @@
-class Fecha{
-    fecha;
-    constructor(fecha){
-    this.fecha = fecha;
-    }
-    difFechas(){
+const operacionesFecha = {
+  diffFechas(fecha1, fecha2) {
+    const diff = Math.abs(fecha2 - fecha1);
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    return `Diferencia: ${dias} días`;
+  },
 
-    }
-    maxFecha(){
+  masFecha(fecha1, fecha2) {
+    return fecha1 > fecha2 ? fecha1 : fecha2;
+  },
 
-    }
-    testFecha(){
+  testFecha(fecha) {
+    return fecha instanceof Date && !isNaN(fecha);
+  },
 
-    }
-    ayerFecha(){
+  sysOfFecha(fecha) {
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1;
+    const año = fecha.getFullYear();
+    return `${dia}/${mes}/${año}`;
+  }
+};
 
-    }
-    manFecha(){
+const fecha1 = new Date('2024-01-15');
+const fecha2 = new Date('2024-01-20');
 
-    }
-}
-
-let fecha1 = new Fecha(Date.now());
-let fecha2 = new Fecha();
+console.log('Diferencia:', operacionesFecha.diffFechas(fecha1, fecha2), 'días'); //
+console.log('Más reciente:', operacionesFecha.masFecha(fecha1, fecha2)); 
+console.log('¿Es válida?', operacionesFecha.testFecha(fecha1)); 
+console.log('¿Es válida?', operacionesFecha.testFecha(new Date('fecha inválida'))); 
+console.log('Ayer de fecha2:', operacionesFecha.ayerFecha(fecha2)); 
