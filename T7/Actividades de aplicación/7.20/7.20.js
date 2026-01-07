@@ -3,12 +3,6 @@ let x = 0;
 let y = 0;
 const step = 10;
 
-
-// document.addEventListener("keypress", (event)=>{
-//     console.log(event.key);
-//     console.log(event.location);
-// });
-
 document.addEventListener("keydown", (event) => {
 
   switch (event.key) {
